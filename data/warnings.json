@@ -1,0 +1,88 @@
+{
+   "time":1493138434000,
+   "warnings":{
+      "108335000":[
+         {
+            "start":1493118000000,
+            "end":1493222400000,
+            "regionName":"Kreis Konstanz",
+            "level":3,
+            "type":2,
+            "altitudeStart":null,
+            "event":"DAUERREGEN",
+            "headline":"Amtliche WARNUNG vor DAUERREGEN",
+            "description":"Es tritt Dauerregen auf. Dabei werden Niederschlagsmengen zwischen 30 l/mÂ² und 50 l/mÂ² erwartet.",
+            "altitudeEnd":null,
+            "stateShort":"BW",
+            "instruction":"",
+            "state":"Baden-WÃ¼rttemberg"
+         },
+         {
+            "start":1493157600000,
+            "end":1493193600000,
+            "regionName":"Kreis Konstanz",
+            "level":3,
+            "type":3,
+            "altitudeStart":600,
+            "event":"SCHNEEFALL",
+            "headline":"Amtliche WARNUNG vor SCHNEEFALL",
+            "description":"Es tritt im Warnzeitraum oberhalb 600 m Schneefall mit Mengen zwischen 5 cm und 10 cm auf. In Staulagen werden Mengen bis 15 cm erreicht. Verbreitet wird es glatt.",
+            "altitudeEnd":null,
+            "stateShort":"BW",
+            "instruction":"",
+            "state":"Baden-WÃ¼rttemberg"
+         },
+         {
+            "start":1493157600000,
+            "end":1493186400000,
+            "regionName":"Kreis Konstanz",
+            "level":2,
+            "type":5,
+            "altitudeStart":600,
+            "event":"FROST",
+            "headline":"Amtliche WARNUNG vor FROST",
+            "description":"Es tritt oberhalb 600 m leichter Frost zwischen 0 Â°C und -2 Â°C auf.",
+            "altitudeEnd":null,
+            "stateShort":"BW",
+            "instruction":"",
+            "state":"Baden-WÃ¼rttemberg"
+         }
+      ],
+      "115081000":[
+         {
+            "start":1493127600000,
+            "end":1493139600000,
+            "regionName":"Altmarkkreis Salzwedel",
+            "level":2,
+            "type":1,
+            "altitudeStart":null,
+            "event":"WINDBÃ–EN",
+            "headline":"Amtliche WARNUNG vor WINDBÃ–EN",
+            "description":"Es treten WindbÃ¶en mit Geschwindigkeiten bis 60 km/h (17m/s, 33kn, Bft 7) aus westlicher Richtung auf. In SchauernÃ¤he muss mit SturmbÃ¶en bis 70 km/h (20m/s, 38kn, Bft 8) gerechnet werden.",
+            "altitudeEnd":null,
+            "stateShort":"SA",
+            "instruction":"",
+            "state":"Sachsen-Anhalt"
+         },
+         {
+            "start":1493157600000,
+            "end":1493182800000,
+            "regionName":"Altmarkkreis Salzwedel",
+            "level":2,
+            "type":5,
+            "altitudeStart":null,
+            "event":"DAUERREGEN",
+            "headline":"Amtliche WARNUNG vor DAUERREGEN",
+            "description":"Es tritt Dauerregen auf. Dabei werden Niederschlagsmengen zwischen 30 l/mÂ² und 50 l/mÂ² erwartet.",
+            "altitudeEnd":null,
+            "stateShort":"SA",
+            "instruction":"",
+            "state":"Sachsen-Anhalt"
+         }
+      ]
+   },
+   "vorabInformation":{
+
+   },
+   "copyright":"Copyright Deutscher Wetterdienst"
+}
