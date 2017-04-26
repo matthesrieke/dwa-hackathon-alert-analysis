@@ -44,6 +44,9 @@ var retrieveWarningsCyclic = function() {
       }
 
       resultList.forEach(function (w) {
+        if (w.cell === '105374000') {
+          console.info('OBERGERGISCH!');
+        }
         if (!w.event || w.event.toLowerCase().indexOf('regen') === -1) {
           console.info('No rain event: '+w.event);
           candidateCount--;
@@ -63,12 +66,12 @@ var retrieveWarningsCyclic = function() {
             console.info('processing geometry...');
 
             var result = analysis.intersect(cell, areas);
-            if (result) {
+            if (result && (result.geometries && result.geometries.length > 0) || (result.coordinates && result.coordinates.length > 0)) {
               result.properties = w;
               warningGeoJson.push(result);
             }
             else {
-              console.info('no intersection result');
+              console.info('no intersection result..');
             }
           }
 
@@ -83,4 +86,4 @@ var retrieveWarningsCyclic = function() {
 
 }
 
-setTimeout(retrieveWarningsCyclic, 2000);
+setTimeout(retrieveWarningsCyclic, 30000);
