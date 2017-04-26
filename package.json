@@ -1,6 +1,33 @@
 {
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "alert-analysis",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthesrieke/dwa-hackathon-alert-analysis.git"
+  },
+  "keywords": [
+    "dwd",
+    "alerts",
+    "heavy",
+    "rain"
+  ],
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/matthesrieke/dwa-hackathon-alert-analysis/issues"
+  },
+  "homepage": "https://github.com/matthesrieke/dwa-hackathon-alert-analysis#readme",
+  "description": "",
   "dependencies": {
     "gdal": "^0.9.4",
-    "uuid": "^3.0.1"
+    "request-promise": "^4.2.0",
+    "uuid": "^3.0.1",
+    "ws": "^2.3.1"
   }
 }

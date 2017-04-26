@@ -1,11 +1,11 @@
 {
    "time":1493138434000,
    "warnings":{
-      "108335000":[
+      "108115000":[
          {
             "start":1493118000000,
             "end":1493222400000,
-            "regionName":"Kreis Konstanz",
+            "regionName":"Kreis Böblingen",
             "level":3,
             "type":2,
             "altitudeStart":null,
@@ -20,7 +20,7 @@
          {
             "start":1493157600000,
             "end":1493193600000,
-            "regionName":"Kreis Konstanz",
+            "regionName":"Kreis Böblingen",
             "level":3,
             "type":3,
             "altitudeStart":600,
@@ -35,7 +35,7 @@
          {
             "start":1493157600000,
             "end":1493186400000,
-            "regionName":"Kreis Konstanz",
+            "regionName":"Kreis Böblingen",
             "level":2,
             "type":5,
             "altitudeStart":600,
