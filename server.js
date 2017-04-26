@@ -2,7 +2,7 @@ var gdal = require('gdal');
 var path = require('path');
 var fs = require('fs');
 var analysis = require("./lib/analysis/geojson.js");
-var warnings = require("./lib/warning-dao/localFile.js");
+var warnings = require("./lib/warning-dao/warnings.js");
 var features = require("./lib/features/warnCellFeatures.js");
 var delivery = require("./lib/delivery/websockets.js");
 
@@ -23,6 +23,8 @@ var retrieveWarningsCyclic = function() {
       if (!w.event || w.event.toLowerCase().indexOf('regen') === -1) {
         console.info('No rain event: '+w.event);
         candidateCount--;
+
+        checkIterationFinished(candidateCount, warningGeoJson);
         return;
       }
 
@@ -31,29 +33,41 @@ var retrieveWarningsCyclic = function() {
 
         if (!cell) {
           console.info('Could not retrieve cell geometry');
-          return;
+          console.info('GEOM NOT RETRIEVED: '+candidateCount);
         }
         else {
           console.info('processing geometry...');
+
+          var result = analysis.intersect(cell, testPoints);
+          if (result) {
+            result.properties = w;
+            warningGeoJson.push(result);
+          }
+          else {
+            console.info('no intersection result');
+          }
         }
 
-        var result = analysis.intersect(cell, testPoints);
-        if (result) {
-          result.properties = w;
-          warningGeoJson.push(result);
-        }
-        else {
-          console.info('no result');
-        }
-
-        if (candidateCount === 0 && warningGeoJson.length > 0) {
-          //last candidate, push data
-          delivery.deliver(warningGeoJson);
-        }
+        checkIterationFinished(candidateCount, warningGeoJson);
       });
 
     });
   });
 }
 
-setInterval(retrieveWarningsCyclic, 30000);
+var checkIterationFinished = function(candidateCount, warningGeoJson) {
+  if (candidateCount === 0) {
+    //last candidate, push data
+    if (warningGeoJson.length > 0) {
+      console.info('Sending danger area data.');
+      delivery.deliver(warningGeoJson);
+    }
+    else {
+      console.info('no danger areas identified...');
+    }
+
+    setTimeout(retrieveWarningsCyclic, 30000);
+  }
+}
+
+setTimeout(retrieveWarningsCyclic, 10000);

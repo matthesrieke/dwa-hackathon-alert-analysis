@@ -5,7 +5,7 @@ const ws = new WebSocket('ws://localhost:8090', {
 });
 
 ws.on('message', function incoming(data, flags) {
-  console.info(data);
+  console.info(JSON.stringify(JSON.parse(data), null, 4));
 });
 
 // var turf = require('@turf/combine');
