@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SAGA_METADATA>
+  <HISTORY saga-version="4.0.0">
+    <TOOL library="shapes_grid" id="2" name="Grid Statistics for Polygons">
+      <OPTION type="grid_system" id="PARAMETERS_GRID_SYSTEM" name="Grid system">
+        <CELLSIZE>10</CELLSIZE>
+        <XMIN>32300009.999996997</XMIN>
+        <XMAX>32409789.999996997</XMAX>
+        <YMIN>5590209.99987815</YMIN>
+        <YMAX>5699989.99987815</YMAX>
+      </OPTION>
+      <OPTION type="choice" id="NAMING" name="Field Naming" index="1">grid name</OPTION>
+      <OPTION type="choice" id="METHOD" name="Method" index="0">simple and fast</OPTION>
+      <OPTION type="boolean" id="COUNT" name="Number of Cells">TRUE</OPTION>
+      <OPTION type="boolean" id="MIN" name="Minimum">FALSE</OPTION>
+      <OPTION type="boolean" id="MAX" name="Maximum">FALSE</OPTION>
+      <OPTION type="boolean" id="RANGE" name="Range">FALSE</OPTION>
+      <OPTION type="boolean" id="SUM" name="Sum">FALSE</OPTION>
+      <OPTION type="boolean" id="MEAN" name="Mean">FALSE</OPTION>
+      <OPTION type="boolean" id="VAR" name="Variance">FALSE</OPTION>
+      <OPTION type="boolean" id="STDDEV" name="Standard Deviation">FALSE</OPTION>
+      <OPTION type="integer" id="QUANTILE" name="Quantile">0</OPTION>
+      <INPUT_LIST type="grid_list" id="GRIDS" name="Grids" system="PARAMETERS_GRID_SYSTEM">
+        <INPUT type="grid_list" id="GRIDS" name="Grids" system="PARAMETERS_GRID_SYSTEM"/>
+      </INPUT_LIST>
+      <INPUT type="shapes" id="POLYGONS" name="Polygons">
+        <TOOL library="shapes_grid" id="2" name="Grid Statistics for Polygons">
+          <OPTION type="grid_system" id="PARAMETERS_GRID_SYSTEM" name="Grid system">
+            <CELLSIZE>10</CELLSIZE>
+            <XMIN>32378004.5</XMIN>
+            <XMAX>32395994.5</XMAX>
+            <YMIN>5656004.5</YMIN>
+            <YMAX>5671994.5</YMAX>
+          </OPTION>
+          <OPTION type="choice" id="NAMING" name="Field Naming" index="1">grid name</OPTION>
+          <OPTION type="choice" id="METHOD" name="Method" index="0">simple and fast</OPTION>
+          <OPTION type="boolean" id="COUNT" name="Number of Cells">FALSE</OPTION>
+          <OPTION type="boolean" id="MIN" name="Minimum">FALSE</OPTION>
+          <OPTION type="boolean" id="MAX" name="Maximum">FALSE</OPTION>
+          <OPTION type="boolean" id="RANGE" name="Range">FALSE</OPTION>
+          <OPTION type="boolean" id="SUM" name="Sum">TRUE</OPTION>
+          <OPTION type="boolean" id="MEAN" name="Mean">TRUE</OPTION>
+          <OPTION type="boolean" id="VAR" name="Variance">FALSE</OPTION>
+          <OPTION type="boolean" id="STDDEV" name="Standard Deviation">FALSE</OPTION>
+          <OPTION type="integer" id="QUANTILE" name="Quantile">0</OPTION>
+          <INPUT_LIST type="grid_list" id="GRIDS" name="Grids" system="PARAMETERS_GRID_SYSTEM">
+            <INPUT type="grid_list" id="GRIDS" name="Grids" system="PARAMETERS_GRID_SYSTEM"/>
+          </INPUT_LIST>
+          <INPUT type="shapes" id="POLYGONS" name="Polygons">
+            <TOOL library="shapes_grid" id="6" name="Vectorising Grid Classes">
+              <OPTION type="grid_system" id="PARAMETERS_GRID_SYSTEM" name="Grid system">
+                <CELLSIZE>10</CELLSIZE>
+                <XMIN>32378004.5</XMIN>
+                <XMAX>32395994.5</XMAX>
+                <YMIN>5656004.5</YMIN>
+                <YMAX>5671994.5</YMAX>
+              </OPTION>
+              <OPTION type="choice" id="CLASS_ALL" name="Class Selection" index="1">all classes</OPTION>
+              <OPTION type="choice" id="SPLIT" name="Vectorised class as..." index="1">each island as separated polygon</OPTION>
+              <OPTION type="boolean" id="ALLVERTICES" name="Keep Vertices on Straight Lines">FALSE</OPTION>
+              <INPUT type="grid" id="GRID" name="Grid" system="PARAMETERS_GRID_SYSTEM">
+                <TOOL library="grid_tools" id="15" name="Reclassify Grid Values">
+                  <OPTION type="grid_system" id="PARAMETERS_GRID_SYSTEM" name="Grid system">
+                    <CELLSIZE>10</CELLSIZE>
+                    <XMIN>32378004.5</XMIN>
+                    <XMAX>32395994.5</XMAX>
+                    <YMIN>5656004.5</YMIN>
+                    <YMAX>5671994.5</YMAX>
+                  </OPTION>
+                  <OPTION type="choice" id="METHOD" name="Method" index="1">range</OPTION>
+                  <OPTION type="double" id="MIN" name="minimum value">-99999.000000</OPTION>
+                  <OPTION type="double" id="MAX" name="maximum value">0.400000</OPTION>
+                  <OPTION type="double" id="RNEW" name="new value">-99999.000000</OPTION>
+                  <OPTION type="choice" id="ROPERATOR" name="operator" index="0">&lt;=</OPTION>
+                  <OPTION type="boolean" id="NODATAOPT" name="no data values">TRUE</OPTION>
+                  <OPTION type="double" id="NODATA" name="new value">-99999.000000</OPTION>
+                  <OPTION type="boolean" id="OTHEROPT" name="other values">TRUE</OPTION>
+                  <OPTION type="double" id="OTHERS" name="new value">1.000000</OPTION>
+                  <OPTION type="choice" id="RESULT_NODATA_CHOICE" name="Assign ..." index="0">NoData value of input grid</OPTION>
+                  <INPUT type="grid" id="INPUT" name="Grid" system="PARAMETERS_GRID_SYSTEM">
+                    <TOOL library="grid_calculus" id="1" name="Grid Calculator">
+                      <OPTION type="grid_system" id="PARAMETERS_GRID_SYSTEM" name="Grid system">
+                        <CELLSIZE>10</CELLSIZE>
+                        <XMIN>32378004.5</XMIN>
+                        <XMAX>32395994.5</XMAX>
+                        <YMIN>5656004.5</YMIN>
+                        <YMAX>5671994.5</YMAX>
+                      </OPTION>
+                      <OPTION type="grid_system" id="XGRIDS_GRIDSYSTEM" name="Grid system">
+                        <CELLSIZE>0</CELLSIZE>
+                        <XMIN>0</XMIN>
+                        <XMAX>0</XMAX>
+                        <YMIN>0</YMIN>
+                        <YMAX>0</YMAX>
+                      </OPTION>
+                      <OPTION type="text" id="FORMULA" name="Formula">a-b</OPTION>
+                      <OPTION type="text" id="NAME" name="Name">diff2</OPTION>
+                      <OPTION type="boolean" id="FNAME" name="Take Formula">TRUE</OPTION>
+                      <OPTION type="boolean" id="USE_NODATA" name="Use NoData">FALSE</OPTION>
+                      <OPTION type="choice" id="TYPE" name="Data Type" index="7">4 byte floating point number</OPTION>
+                      <INPUT_LIST type="grid_list" id="GRIDS" name="Grids" system="PARAMETERS_GRID_SYSTEM">
+                        <INPUT type="grid_list" id="GRIDS" name="Grids" system="PARAMETERS_GRID_SYSTEM"/>
+                        <INPUT type="grid_list" id="GRIDS" name="Grids" system="PARAMETERS_GRID_SYSTEM"/>
+                      </INPUT_LIST>
+                      <OUTPUT type="grid" id="RESULT" name="Result">diff2</OUTPUT>
+                    </TOOL>
+                  </INPUT>
+                  <OUTPUT type="grid" id="RESULT" name="Reclassified Grid">diff2_reclassified</OUTPUT>
+                </TOOL>
+              </INPUT>
+              <OUTPUT type="shapes" id="POLYGONS" name="Polygons">diff2_reclassified</OUTPUT>
+            </TOOL>
+          </INPUT>
+          <OUTPUT type="shapes" id="RESULT" name="Statistics">Senken2 [Grid Statistics]</OUTPUT>
+        </TOOL>
+      </INPUT>
+      <OUTPUT type="shapes" id="RESULT" name="Statistics">Senken_stat [Grid Statistics]</OUTPUT>
+    </TOOL>
+  </HISTORY>
+  <SOURCE>
+    <FILE></FILE>
+    <DATABASE>
+      <FIELDS>
+        <FIELD TYPE="LONGINT">ID</FIELD>
+        <FIELD TYPE="DOUBLE">VALUE</FIELD>
+        <FIELD TYPE="STRING">NAME</FIELD>
+        <FIELD TYPE="DOUBLE">SenkeTiefe</FIELD>
+        <FIELD TYPE="INTEGER">BUI2_reclassified [CELLS]</FIELD>
+      </FIELDS>
+    </DATABASE>
+    <PROJECTION>
+      <OGC_WKT>PROJCS["unnamed",GEOGCS["GRS 1980(IUGG, 1980)",DATUM["unknown",SPHEROID["GRS80",6378137,298.257222101],TOWGS84[0,0,0,0,0,0,0]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",9],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",32500000],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]]]</OGC_WKT>
+      <PROJ4>+proj=tmerc +a=6378137.000000 +b=6356752.314140 +towgs84=0,0,0,0,0,0,0 +lat_0=0 +lon_0=9 +k_0=0.9996 +x_0=32500000 +y_0=0 +no_defs</PROJ4>
+      <EPSG>-1</EPSG>
+    </PROJECTION>
+  </SOURCE>
+  <DESCRIPTION></DESCRIPTION>
+</SAGA_METADATA>

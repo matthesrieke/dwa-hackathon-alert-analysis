@@ -11,6 +11,6 @@ ws.on('message', function incoming(data, flags) {
 // var turf = require('@turf/combine');
 // var fs = require('fs');
 //
-// var points = JSON.parse(fs.readFileSync('./data/randompoints/random_points.json.geojson'));
+// var points = JSON.parse(fs.readFileSync('./data/randompoints/test.json'));
 //
 // console.info(JSON.stringify(turf(points), null, 4));
